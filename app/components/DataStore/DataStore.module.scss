@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+  .wrapper {
+    display: flex;
+    color: #fff;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 20px;
+
+    @media (max-width: 690px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 16px;
+      padding: 10px 10px;
+    }
+
+    &.two {
+      @media (max-width: 810px) {
+        width: 380px;
+        row-gap: 15px;
+      }
+      @media (max-width: 810px) {
+        width: 380px;
+        row-gap: 15px;
+      }
+      @media (max-width: 680px) {
+        width: 315px;
+        row-gap: 15px;
+      }
+      @media (max-width: 450px) {
+        width: 270px;
+        row-gap: 15px;
+      }
+    }
+    
+    .count {
+      background-color: $color-green;
+      padding: 5px 10px;
+      text-align: center;
+      border-bottom-right-radius: 20px;
+      border-top-left-radius: 20px;
+      margin: 0 10px;
+      min-width: 50px;
+      //width: 50px;
+
+      &.middle {
+        width: 120px;
+      }
+    }
+  }
+}
