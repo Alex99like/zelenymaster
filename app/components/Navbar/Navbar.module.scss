@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 320px;
+  height: 100vh;
+  background: $color-main-bg;
+}
+
+.toggle {
+  position: fixed;
+  z-index: 2;
+  background-color: $color-main-bg;
+  width: 60px;
+  height: 50px;
+  border-radius: 20px;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+
+  .line {
+    display: flex;
+    width: 60%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  .btn {
+    background: none;
+    border: none;
+  }
+
+  .link {
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    
+    &.active {
+      background-color: #fff;
+      color: $color-main-bg;
+    }
+  }
+}
