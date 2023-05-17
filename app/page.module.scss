@@ -1,0 +1,106 @@
+@import './styles/variables.scss';
+
+.main {
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-image: url('./assets/images/bg-forest.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 110px 20px 100px;
+  gap: 50px;
+ 
+  @media (max-width: 450px) {
+    padding: 110px 10px 100px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(0deg, $color-main-bg 20%, $color-main-bg-gradient 45%, rgba(255,255,255,0) 100%);
+  }
+
+  .title {
+    font-size: 60px;
+    color: #fff;
+
+    @media (max-width: 810px) {
+      font-size: 50px;
+    }
+
+    @media (max-width: 690px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 690px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 355px) {
+      font-size: 20px;
+    }
+
+    span {
+      background-color: #02ad1c;
+      padding: 5px 20px;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
+    }
+  }
+
+  .description {
+    margin-top: 20px;
+    max-width: 300px;
+    padding: 20px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  .wrapper-btn {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+
+    .button {
+      border: 2px solid #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      background-color: transparent;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      transition: .2s all;
+
+      @media (max-width: 420px) {
+        width: 300px;
+        row-gap: 15px;
+      }
+
+      &:hover {
+        backdrop-filter: blur(10px);
+      }
+    }
+  }
+  
+}

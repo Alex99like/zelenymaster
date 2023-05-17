@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: rgb(38, 38, 38);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+      /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  border: 1px solid rgb(27, 27, 27);  /* padding вокруг плашки */
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
