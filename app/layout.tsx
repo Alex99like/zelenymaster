@@ -1,10 +1,14 @@
 import { Metadata } from 'next'
 import './styles/globals.scss'
-import { Inter } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 import { Navbar } from './components/Navbar/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Nunito({ subsets: ['latin'] })
+
+// const font = Poppins({ weight: [
+//   '100', '200', '300', '400', '500', '600', '700', '800', '900'
+// ], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Зеленный Мастер',
@@ -21,7 +25,7 @@ export default function RootLayout({
 }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Navbar />
         {children}
       </body>
