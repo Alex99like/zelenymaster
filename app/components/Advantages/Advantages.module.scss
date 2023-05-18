@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.advantages {
+  height: 1000px;
+  position: relative;
+  background-color: $color-main-bg;
+
+  .title {
+    color: $color-text-green;
+    font-size: 24px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    .hr {
+      width: 30%;
+      height: 3px;
+      background-color: $color-text-green;
+      border-radius: 20px;
+      border: none;
+    }
+  }
+
+  .progress {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    border-radius: 20px;
+    right: 0;
+    height: 10px;
+    width: 7px;
+    transform-origin: 0%;
+    background-color: $color-text-green;
+  }
+
+  .container {
+    width: 80%;
+    margin-left: 50px;
+    background-color: #fff;
+  }
+
+}

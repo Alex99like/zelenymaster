@@ -18,7 +18,7 @@ type IMenuItems = {
 
 export const MenuItems = ({ active, toggle }: IMenuItems) => {
   const param = usePathname()
-    console.log(param, links[0].route)
+
   return (
     <ul className={styles.menu}>
       {links.map((link, idx) => (
