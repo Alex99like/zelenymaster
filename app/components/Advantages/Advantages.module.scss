@@ -2,6 +2,7 @@
 
 .advantages {
   position: relative;
+  padding: 40px 0;
   background-color: $color-main-bg;
 
   .title {
@@ -25,7 +26,7 @@
 
   .progress {
     position: absolute;
-    top: 80px;
+    top: 110px;
     left: 30px;
     border-radius: 20px;
     right: 0;
@@ -57,6 +58,17 @@
         background-color: $color-main-bg;
         left: -42px;
         top: -8px;
+      }
+
+      .name {
+        color: $color-text-green;
+        font-size: 20px;
+      }
+
+      .description {
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 2px 2px 1px -1px $color-text-green;
       }
     }
   }
