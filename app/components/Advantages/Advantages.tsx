@@ -47,6 +47,9 @@ export const Advantages = () => {
       />
       <div className={styles.container}>
         <AdvantagesItem values={descriptions.one} />
+        <AdvantagesItem values={descriptions.two} />
+        <AdvantagesItem values={descriptions.three} />
+        <AdvantagesItem values={descriptions.four} />
       </div>
     </section>
   )
