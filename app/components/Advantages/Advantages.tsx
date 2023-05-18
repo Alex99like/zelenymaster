@@ -6,7 +6,7 @@ import { AdvantagesItem } from "./AdvantagesItem";
 const descriptions = {
   one: {
     name: 'Широкий ассортимент.',
-    description: 'Мы стараемся идти в ногу со временем (отслеживать новинки, учитывать пожелания клиентов).'
+    description: 'Мы можем предложить Вам качественную продукцию в точном соответствии с Вашими запросами и пожеланиями, как в отношении декоративных кустарников и хвойных растений, так и в отношении плодово-ягодных растений.'
   },
   two: {
     name: 'Высокое качество товара',
@@ -14,7 +14,7 @@ const descriptions = {
   },
   three: {
     name: 'Наши специалисты',
-    description: 'помогут Вам повысить эффективность и рентабельность производства за счет внедрения новых технологий, подходов и идей.'
+    description: 'Наша высокая квалификация опирается также на самые прогрессивные методы работы. Мы стремимся к максимальной механизации, что позволяет поддерживать неизменно высокий уровень качества. Профессионализм в организационных делах положительно сказывается на уровне наших цен.'
   },
   four: {
     name: 'Система скидок',
@@ -30,7 +30,10 @@ export const Advantages = () => {
   });
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setHeight(latest)
+    const current = ref.current?.offsetHeight || 0
+    if (current > latest - 250) {
+      setHeight(latest - (250))
+    }
   })
   
   return (
@@ -43,7 +46,7 @@ export const Advantages = () => {
       
       <motion.div 
         className={styles.progress}
-        animate={{ height: height - 150 }}
+        animate={{ height: height }}
       />
       <div className={styles.container}>
         <AdvantagesItem values={descriptions.one} />

@@ -48,7 +48,7 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     height: 70px;
     width: 100%;
     background: linear-gradient(0deg, $color-main-bg 20%, $color-main-bg-gradient 45%, rgba(255,255,255,0) 100%);
