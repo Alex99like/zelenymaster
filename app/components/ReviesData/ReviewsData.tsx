@@ -27,6 +27,7 @@ export const ReviewsData = () => {
       <div className={styles['container-img']}>
         {avatars.map((photo, idx) => (
           <motion.div
+            key={photo.src}
             initial={{ opacity: 0 }}
             animate={{ x: -idx * 15 , opacity: 1 }}
             transition={{ delay: idx / 10 + 1 }}

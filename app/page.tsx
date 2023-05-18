@@ -1,15 +1,15 @@
 'use client'
 
-import Image from 'next/image'
-import BgImageForest from './assets/images/bg-forest.jpg'
 import styles from './page.module.scss'
-import { motion } from 'framer-motion'
-import { Button } from '@mui/material'
+import { motion, useMotionValueEvent, useScroll, useTransform, useViewportScroll } from 'framer-motion'
 import { DataStore } from './components/DataStore/DataStore'
 import { ReviewsData } from './components/ReviesData/ReviewsData'
-import { ArrowIcon } from './shared/ArrowIcon/ArrowIcon'
+import { createRef, useEffect, useRef, useState } from 'react'
+import { Advantages } from './components/Advantages/Advantages'
 
 export default function Home() {
+  
+  
   return (
     <main className={styles.main}>
       <section className={styles.container}>
@@ -35,7 +35,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: .9, type: 'spring' }}
           >
-            ПРОДУКЦИЯ <ArrowIcon direction='right' color='#f9f9f9' />
+            ПРОДУКЦИЯ
           </motion.button>
           <motion.button
             className={styles.button}
@@ -47,9 +47,7 @@ export default function Home() {
           </motion.button>
         </motion.div>
       </section>
-      <section className={styles.advantages}>
-        <h2>О НАС </h2>
-      </section>
+      <Advantages />
     </main>
   )
 }

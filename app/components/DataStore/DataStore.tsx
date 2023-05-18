@@ -34,7 +34,7 @@ export const DataStore = () => {
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: .8, type: 'spring' }}
+        transition={{ delay: 1, type: 'spring' }}
         className={cn(styles.wrapper, styles.two)}
       > 
         <div className={styles.rating}>
