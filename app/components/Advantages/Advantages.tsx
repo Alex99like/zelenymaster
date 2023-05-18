@@ -32,7 +32,7 @@ export const Advantages = () => {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const current = ref.current?.offsetHeight || 0
     if (current > latest - 250) {
-      setHeight(latest - (250))
+      setHeight(prev => latest - (250) > prev ? latest - (250) : prev)
     }
   })
   
