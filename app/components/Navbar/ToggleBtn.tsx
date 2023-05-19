@@ -10,7 +10,9 @@ type IToggle = {
 
 export const ToggleBtn = ({ toggle, active }: IToggle) => {
   return (
-    <div 
+    <motion.div 
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
       className={cn(styles.toggle, {
         [styles.active]: active
       })}
@@ -28,6 +30,6 @@ export const ToggleBtn = ({ toggle, active }: IToggle) => {
         className={styles.line}
         animate={active ? {rotate: '-45deg', translateY: -8 } : {rotate: 0}}
       ></motion.span>
-    </div>
+    </motion.div>
   )
 }

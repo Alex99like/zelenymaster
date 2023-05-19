@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.1",
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-countup": "^4.3.1",
@@ -19,6 +16,7 @@
     "classnames": "^2.3.2",
     "framer-motion": "^10.12.12",
     "next": "13.4.2",
+    "nextjs-progressbar": "^0.0.16",
     "react": "18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: start;
   padding: 10px;
+  z-index: 2;
 
   .title {
     position: relative;
@@ -37,6 +38,7 @@
     color: #b1b1b1;
     font-size: 14px;
     margin: 10px 0;
+    z-index: 2;
 
     @media (max-width: 390px) {
       font-size: 12px;

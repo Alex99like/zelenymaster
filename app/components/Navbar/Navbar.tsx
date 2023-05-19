@@ -6,12 +6,12 @@ import { useState } from "react";
 import { ToggleBtn } from "./ToggleBtn";
 import cn from 'classnames'
 import { MenuItems } from "./MenuItems";
-
 export const Navbar = () => {
   const [isOpen, toggleOpen] = useState(false);
 
   return (
-    <div>
+    <>
+      <div>
       <ToggleBtn 
         toggle={toggleOpen}
         active={isOpen}
@@ -28,5 +28,6 @@ export const Navbar = () => {
         />
       </motion.nav>
     </div>
+    </>
   )  
 };
