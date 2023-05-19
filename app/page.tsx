@@ -8,7 +8,7 @@ import { createRef, useEffect, useRef, useState } from 'react'
 import { Advantages } from './components/Advantages/Advantages'
 
 export default function Home() {
-  
+  const ref = createRef<HTMLDivElement>()
   
   return (
     <main className={styles.main}>
@@ -17,7 +17,7 @@ export default function Home() {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: .2, type: 'spring' }}
+          transition={{ type: 'spring' }}
           className={styles.title}
         >
           КФХ <span>«Зелёный мастер»</span>
@@ -42,12 +42,13 @@ export default function Home() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: .9, type: 'spring' }}
+            onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}
           >
             ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ
           </motion.button>
         </motion.div>
       </section>
-      <Advantages />
+      <Advantages ref={ref} />
     </main>
   )
 }

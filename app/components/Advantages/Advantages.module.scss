@@ -7,8 +7,8 @@
 
   .title {
     color: $color-text-green;
-    font-size: 24px;
-    width: 80%;
+    font-size: 18px;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -58,6 +58,15 @@
         background-color: $color-main-bg;
         left: -42px;
         top: -8px;
+      }
+
+      .line {
+        position: absolute;
+        background-color: $color-text-green;
+        width: 7px;
+        height: 100%;
+        left: -25px;
+        top: 32px;
       }
 
       .name {

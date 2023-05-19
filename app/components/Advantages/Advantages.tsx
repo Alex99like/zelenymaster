@@ -1,5 +1,5 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
-import { createRef, useState } from "react";
+import { createRef, forwardRef, useState } from "react";
 import styles from './Advantages.module.scss'
 import { AdvantagesItem } from "./AdvantagesItem";
 
@@ -22,38 +22,43 @@ const descriptions = {
   }
 }
 
-export const Advantages = () => {
-  const ref = createRef<HTMLElement>()
-  const [height, setHeight] = useState(0)
-  const { scrollY } = useScroll({
-    target: ref,
-  });
+export const Advantages = forwardRef<HTMLDivElement>((_, refer) => {
+//   const ref = createRef<HTMLElement>()
+//   const [height, setHeight] = useState(0)
+//   const { scrollY } = useScroll({
+//     target: ref,
+//   });
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const current = ref.current?.offsetHeight || 0
-    if (current > latest - 250) {
-      setHeight(prev => latest - (250) > prev ? latest - (250) : prev)
-    }
-  })
+//   useMotionValueEvent(scrollY, "change", (latest) => {
+//     const current = ref.current?.offsetHeight || 0
+//     if (current > latest - 250) {
+//       setHeight(prev => latest - (250) > prev ? latest - (250) : prev)
+//     }
+//   })
   
   return (
-    <section ref={ref} className={styles.advantages}>
-      <div className={styles.title}>
+    <section className={styles.advantages}>
+      <motion.div ref={refer} className={styles.title}
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 1, once: true }}
+      >
         <hr className={styles.hr} />
         <h2 className={styles.h2}>ПРЕИМУЩЕСТВА</h2>
         <hr className={styles.hr} />
-      </div>
+      </motion.div>
       
-      <motion.div 
+      {/* <motion.div 
         className={styles.progress}
         animate={{ height: height }}
-      />
+      /> */}
       <div className={styles.container}>
         <AdvantagesItem values={descriptions.one} />
         <AdvantagesItem values={descriptions.two} />
         <AdvantagesItem values={descriptions.three} />
-        <AdvantagesItem values={descriptions.four} />
+        <AdvantagesItem values={descriptions.four} last />
       </div>
     </section>
   )
 }
+)

@@ -4,6 +4,7 @@ import { Nunito } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 import { Navbar } from './components/Navbar/Navbar'
 
+
 const font = Nunito({ subsets: ['latin'] })
 
 // const font = Poppins({ weight: [
