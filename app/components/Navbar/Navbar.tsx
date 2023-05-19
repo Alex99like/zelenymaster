@@ -6,11 +6,19 @@ import { useState } from "react";
 import { ToggleBtn } from "./ToggleBtn";
 import cn from 'classnames'
 import { MenuItems } from "./MenuItems";
+import ProgressBar from 'next-nprogress-bar';
+
 export const Navbar = () => {
   const [isOpen, toggleOpen] = useState(false);
 
   return (
     <>
+      <ProgressBar
+          height="4px"
+          color="#bbfd5e"
+          shallowRouting
+          appDirectory
+        />
       <div>
       <ToggleBtn 
         toggle={toggleOpen}

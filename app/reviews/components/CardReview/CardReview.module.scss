@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px;
+  background-color: #6a69692e;
+  border-radius: 10px;
+
+  .hr-one {
+    background-color: $color-main-bg;
+    border: none;
+    height: 2px;
+    //border-radius: 30px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    color: $color-text-green;
+    margin: 0 10px;
+
+    .img {
+      margin-right: 20px;
+    }
+
+    .date {
+      margin-left: auto;
+      margin-right: 20px;
+      color: #dcdcdc;
+    }
+  }
+  
+  .description {
+    color: #cccccc;
+    margin: 0 20px;
+  }
+}
