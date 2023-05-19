@@ -13,6 +13,7 @@ const font = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Зеленный Мастер',
+  
   description: 'Мы предлагаем вам растения, качество которых полностью соответствует требованиям семенной и карантинной государственных инспекций.',
   icons: {
     icon: '/main-icon.svg',
