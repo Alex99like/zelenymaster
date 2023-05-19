@@ -2,6 +2,8 @@
 
 .main {
   position: relative;
+  background-color: $color-main-bg;
+  overflow-x: hidden;
 }
 
 .container {
@@ -73,7 +75,7 @@
 
 
     span {
-      background-color: #02ad1c;
+      background-color: #018d16eb;
       padding: 5px 20px;
       border-bottom-right-radius: 50px;
       border-top-left-radius: 50px;

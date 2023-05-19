@@ -22,10 +22,10 @@ export const Navbar = () => {
         animate={isOpen ? { width: 300, height: '100vh', borderRadius: 0 } : { width: 0, height: 0 }}
         transition={{ type: 'tween' }}
         >
-        <MenuItems 
+        {isOpen && <MenuItems 
           toggle={toggleOpen}
           active={isOpen}
-        />
+        />}
       </motion.nav>
     </div>
     </>
