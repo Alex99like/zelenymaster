@@ -9,9 +9,6 @@ interface IAdvantagesItem {
 }
 
 export const AdvantagesItem = ({ values, last }: IAdvantagesItem) => {
-  //const ref = createRef<HTMLDivElement>()
-  //const isInView = useInView(ref, { once: false })
-
 
   return (
     <motion.div 
@@ -28,8 +25,6 @@ export const AdvantagesItem = ({ values, last }: IAdvantagesItem) => {
         initial={{ scale: 0, y: -20 }}
         whileInView={{ scale: 1, y: 0 }}
         viewport={{ amount: 1, once: true }}
-        //transition={{ delay: 1 }}
-        //ref={ref}
       >
         <SuccessIcon className={styles.icon} width={40} />
       </motion.div>
@@ -37,7 +32,7 @@ export const AdvantagesItem = ({ values, last }: IAdvantagesItem) => {
         className={styles.name}
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ amount: 1, once: true }}
+        viewport={{ amount: 0.5, once: true }}
         transition={{ delay: 0.3 }}
       >{values.name}</motion.h3>
       <motion.p

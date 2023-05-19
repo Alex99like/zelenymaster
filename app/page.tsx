@@ -6,6 +6,7 @@ import { DataStore } from './components/DataStore/DataStore'
 import { ReviewsData } from './components/ReviesData/ReviewsData'
 import { createRef, useEffect, useRef, useState } from 'react'
 import { Advantages } from './components/Advantages/Advantages'
+import { About } from './components/About/About'
 
 export default function Home() {
   const ref = createRef<HTMLDivElement>()
@@ -49,6 +50,7 @@ export default function Home() {
         </motion.div>
       </section>
       <Advantages ref={ref} />
+      <About />
     </main>
   )
 }

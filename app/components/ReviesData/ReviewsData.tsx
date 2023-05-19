@@ -23,7 +23,7 @@ export const ReviewsData = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.1 }}
-        className={styles.description}>Мы стремимся сделать работу не только плодотворной, но и максимально удобной для Вас.</motion.p>
+        className={styles.description}>Мы стремимся сделать работу не только плодотворной, <br/> но и максимально удобной для Вас.</motion.p>
       <div className={styles['container-img']}>
         {avatars.map((photo, idx) => (
           <motion.div
@@ -41,6 +41,11 @@ export const ReviewsData = () => {
             />
           </motion.div>
         ))}
+        <motion.span className={styles.count}
+          initial={{ opacity: 0 }}
+          animate={{ x: -60, y: 5, opacity: 1 }}
+          transition={{ delay: 1.7 }}
+        >4000+</motion.span>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ x: -40, opacity: 1 }}

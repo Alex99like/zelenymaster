@@ -41,7 +41,7 @@ export const Advantages = forwardRef<HTMLDivElement>((_, refer) => {
       <motion.div ref={refer} className={styles.title}
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 1, once: true }}
+        viewport={{ amount: 0.5, once: true }}
       >
         <hr className={styles.hr} />
         <h2 className={styles.h2}>ПРЕИМУЩЕСТВА</h2>

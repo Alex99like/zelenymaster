@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  background-color: $color-main-bg;
+  padding: 20px 10px 20px;
+
+  .title {
+    color: $color-text-green;
+    font-size: 12px;
+    width: 90%;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .hr {
+      width: 10%;
+      height: 3px;
+      background-color: $color-text-green;
+      border-radius: 20px;
+      border: none;
+    }
+    
+  }
+
+  .container {
+    color: #cdcccc;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      padding: 10px 10px;
+      background-color: #5858585c;
+      border-radius: 5px;
+
+      strong {
+        color: $color-text-green;
+      }
+    }
+  }
+
+  .list {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h3 {
+      color: $color-text-green;
+      font-size: 20px;
+    }
+
+    li {
+      margin-left: 30px;
+      list-style-type: none;
+      position: relative;
+      color: #cdcccc;
+
+      .icon {
+        position: absolute;
+        top: 0px;
+        left: -25px;
+      }
+    }
+  }
+}
