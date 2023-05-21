@@ -3,6 +3,7 @@ import './styles/globals.scss'
 import { Nunito } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 import { Navbar } from './components/Navbar/Navbar'
+import Head from 'next/head'
 const font = Nunito({ subsets: ['latin'] })
 
 // const font = Poppins({ weight: [
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     shortcut: '/main-icon.svg',
     apple: '/main-icon.svg',
   },
+  
 }
 
 export default function RootLayout({
@@ -25,6 +27,14 @@ export default function RootLayout({
 }: PropsWithChildren) {
   return (
     <html lang="en">
+      <Head>
+        <link rel={'manifest'} href='/manifest.json' />
+        <link rel='apple-touch-icon' href='/icon.png' />
+        <meta name='theme-color' content='#fff' />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
+      </Head>
+      
       <body className={font.className}>
         <Navbar />
         {children}
