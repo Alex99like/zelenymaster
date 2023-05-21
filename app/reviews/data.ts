@@ -1,8 +1,8 @@
 export interface IReviews { author: string; text: string; rating: number, date?: string }
 
 function addRandomDatesToObjects(arr: IReviews[]): IReviews[] {
-    const startDate = new Date(2014, 0, 1);
-    const endDate = new Date(2023, 11, 31);
+    const startDate = new Date(2014, 11, 1);
+    const endDate = new Date(2023, 5, 19);
   
     return arr.map((obj) => {
       const randomDate = new Date(

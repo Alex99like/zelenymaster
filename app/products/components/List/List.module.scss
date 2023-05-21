@@ -1,0 +1,14 @@
+.wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #393939fb;
+}
