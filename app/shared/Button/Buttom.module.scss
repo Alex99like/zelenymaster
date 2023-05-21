@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid $color-main-bg;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+
+  .btn {
+    color: $color-text-green;
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  
+  .bubble {
+    position: absolute;
+    z-index: 4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    opacity: 0;
+
+    background-color: #61973870;
+    animation: ripple-animation .6s linear;
+  }
+  
+//   &.focus {
+//     transition: 1s all;
+//     box-shadow: 0px 0px 5px $color-text-green;
+//   }
+
+//   .label {
+//     transition: 1s all;
+//     position: absolute;
+//     padding: 0 5px;
+//     height: 29px;
+//     border-radius: 5px;
+//     left: 25px;
+//     font-size: 24px;
+//     font-weight: 700;
+//     color: #656565;
+
+//     &.active {
+      
+//       transform: scale(0.9) translate(-10px, -28px);
+//       color: $color-text-green;
+//       background-color: $color-main-bg;
+//       //background-color: #2b2b2b;
+//     }
+//   }
+
+//   .input {
+//     border: none;
+//     background-color: transparent;
+//     font-size: 24px;
+//     background-color: #2b2b2b;
+//     color: #919191;
+//     padding: 10px 15px;
+//     outline: none;
+//     border-radius: 15px;
+//     //z-index: 3;
+//   }
+
+//   .bubble {
+//     position: absolute;
+//     //z-index: 0;
+//     height: 10px;
+//     width: 10px;
+//     border-radius: 50%;
+//     opacity: 0;
+
+//     background-color: #61973870;
+//     animation: ripple-animation 1s linear;
+//   }
+}
+
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(40);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(40);
+    opacity: 0;
+  }
+}
+
