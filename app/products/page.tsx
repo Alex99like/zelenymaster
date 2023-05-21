@@ -13,7 +13,7 @@ export default function Products() {
 
   return (
     <main className={styles.wrapper}>
-      <InputSearch />
+      <Search data={dataDecoration} />
       <MainSelect />
 
       <List data={dataDecoration} />

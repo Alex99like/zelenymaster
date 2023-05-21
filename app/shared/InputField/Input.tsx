@@ -5,11 +5,13 @@ import cn from 'classnames'
 import React, { createRef, useState } from 'react'
 import styles from './Input.module.scss'
 
-interface InputWithRippleProps {
-  placeholder: string;
+interface InputSearchProps {
+  value: string
+  setValue: (val: string) => void
+  setActive: (val: boolean) => void
 }
 
-export const InputSearch = () => {
+export const InputSearch = ({ setValue, value, setActive }: InputSearchProps) => {
   const ref = createRef<HTMLLabelElement>()
   const [card, setCard] = useState({ top: 0, left: 0 })
   const [focus, setFocus] = useState(false)
@@ -19,7 +21,7 @@ export const InputSearch = () => {
   const handlerBubble = (e: React.MouseEvent<HTMLLabelElement, MouseEvent>) => {
     const rect = ref.current?.getBoundingClientRect();
     
-    console.log(rect)
+    setActive(true)
     const x = e.clientX - rect!.left;
     const y = e.clientY - rect!.top;
     setLabel(true)
@@ -35,8 +37,11 @@ export const InputSearch = () => {
         ref={inputRef}
         onBlur={() => {
           setFocus(false)
+          setActive(false)
           setLabel(() => inputRef.current?.value ? true : false)
         }}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         type='text' 
         className={styles.input} 
       />

@@ -20,6 +20,7 @@ export const MainSelect = () => {
     <div className={styles.wrapper}>
       {data.map((item, idx) => (
         <span 
+          key={idx}
           className={styles.item}
           onClick={() => setActiveEl(idx + 1)}
         ><strong className={cn({ [styles['active-strong']]: idx + 1 === activeEl })}>{item}</strong></span>

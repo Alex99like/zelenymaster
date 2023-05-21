@@ -59,8 +59,9 @@
     border-radius: 20px;
     
     &.active {
-      background-color: #fff;
-      color: $color-main-bg;
+      background-color: transparent;
+      color: $color-text-green;
+      border: 1px solid $color-text-green;
     }
   }
 }
